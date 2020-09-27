@@ -1,0 +1,56 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #camera, #camera--view, #camera--sensor, #camera--output{
+      /* position: fixed; */
+      height: 100%;
+      width: 100%;
+      /* object-fit: cover; */
+  }
+  #camera--view, #camera--sensor, #camera--output{
+      transform: scaleX(-1);
+      filter: FlipH;
+      margin-left:8%;
+  }
+  #camera--trigger{
+      width: 200px;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      padding: 15px 20px;
+      text-align: center;
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+      position: fixed;
+      bottom: 30px;
+      left: calc(50% - 100px);
+  }
+
+ 
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: black;
+}

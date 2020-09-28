@@ -76,10 +76,9 @@ confirm.addEventListener("click",downloadPNG);
 
 
 function downloadPNG() {
-    Canvas2Image.saveAsPNG(outputcanvas);
     time=10;
+    return Canvas2Image.saveAsPNG(outputcanvas);
 }
-  
 
 
 // Start the video stream when the window loads

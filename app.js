@@ -72,14 +72,14 @@ const redo = document.getElementById("redo").addEventListener("click",()=>{
 });
 
 // Save Image if confirm is clicked
-confirm.addEventListener("click",downloadJPEG);
+confirm.addEventListener("click",downloadPNG);
 
 
-function downloadJPEG() {
+function downloadPNG() {
     time=10;
 
     var link = document.createElement('a');
-    link.download = 'smartfit.jpeg';
+    link.download = 'smartfit.png';
     link.href = outputcanvas.toDataURL()
     link.click();
     //return Canvas2Image.saveAsJPG(outputcanvas);

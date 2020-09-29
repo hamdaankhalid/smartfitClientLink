@@ -32,8 +32,8 @@ var time = 10;
 
 function takepic(){
 
-    outputcanvas.width = cameraView.videoWidth - 150 ;
-    outputcanvas.height = cameraView.videoHeight - 150 ;
+    outputcanvas.width = cameraView.videoWidth  ;
+    outputcanvas.height = cameraView.videoHeight  ;
     
     outputcanvas.getContext("2d").translate(outputcanvas.width, 0);
     outputcanvas.getContext("2d").scale(-1, 1);
@@ -72,12 +72,17 @@ const redo = document.getElementById("redo").addEventListener("click",()=>{
 });
 
 // Save Image if confirm is clicked
-confirm.addEventListener("click",downloadPNG);
+confirm.addEventListener("click",downloadJPEG);
 
 
-function downloadPNG() {
+function downloadJPEG() {
     time=10;
-    return Canvas2Image.saveAsPNG(outputcanvas);
+
+    var link = document.createElement('a');
+    link.download = 'smartfit.jpeg';
+    link.href = outputcanvas.toDataURL()
+    link.click();
+    //return Canvas2Image.saveAsJPG(outputcanvas);
 }
 
 

@@ -10,7 +10,12 @@ html, body{
       width: 100%;
       /* object-fit: cover; */
   }
-  #camera--view, #camera--sensor, #camera--output{
+
+  #outputdummy{
+    height: 300px;
+    width: 70%;
+  }
+  #camera--view, #camera--sensor{
       transform: scaleX(-1);
       filter: FlipH;
       margin-left:8%;

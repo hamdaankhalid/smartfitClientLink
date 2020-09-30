@@ -77,7 +77,8 @@ function takepic(){
     outputcanvas.getContext("2d").scale(-1, 1);
 
     outputcanvas.getContext("2d").drawImage(cameraView, 0, 0);
-
+    confirm.disabled = false;
+	
     fitImageOn(outputdummy, cameraView);
 }
   
